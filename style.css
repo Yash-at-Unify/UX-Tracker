@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    margin: 0;
+}
+h1 {
+    color: #333;
+}
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+input {
+    width: 92%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#user-info {
+    margin-top: 15px;
+    color: #333;
+}
+
+/*Eye for Password*/
+ .password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#password{
+    width: 100%;
+    padding-right: 40px;
+}
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #555;
+}
