@@ -1,0 +1,26 @@
+{
+  "name": "ux-time-tracker",
+  "version": "1.0.0",
+  "description": "Time Tracker for Unify Xperts.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yash-at-Unify/Electron-tutorial.git"
+  },
+  "author": "Yash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yash-at-Unify/Electron-tutorial/issues"
+  },
+  "homepage": "https://github.com/Yash-at-Unify/Electron-tutorial#readme",
+  "devDependencies": {
+    "electron": "^35.0.2"
+  },
+  "dependencies": {
+    "axios": "^1.8.3"
+  }
+}
