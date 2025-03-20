@@ -19,4 +19,4 @@ document.getElementById('login-button').addEventListener('click', async () => {
       console.error("Error in renderer.js:", err);
     }
   });
-  
+

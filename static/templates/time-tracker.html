@@ -7,33 +7,26 @@
     <link rel="stylesheet" href="../css/tracker-style.css">
 </head>
 <body>
-
     <div class="container">
         <h2>Time Tracker</h2>
 
-        <!-- Time Toggle Switch -->
         <div class="toggle-container">
-            <label class="switch">
-                <input type="checkbox" id="timeToggle">
-                <span class="slider"></span>
-            </label>
-            <p id="timer">00:00:00</p>
+            <label>Start Tracking</label>
+            <input type="checkbox" id="timeToggle">
         </div>
 
-        <div class="tracker-box">
-            <input type="text" id="companyName" placeholder="Company Name">
-            <input type="text" id="projectName" placeholder="Project Name">
-            <input type="text" id="activityName" placeholder="Activity Name">
-        </div>
+        <p id="timer">Tracked Time: 0 mins</p>
 
-        <!-- Screenshot Preview Section -->
+        <input type="text" id="companyName" placeholder="Company Name">
+        <input type="text" id="projectName" placeholder="Project Name">
+        <input type="text" id="activityName" placeholder="Activity Name">
+
         <div class="screenshot-section">
             <h3>Recent Screenshots</h3>
             <div id="screenshotPreview"></div>
         </div>
     </div>
 
-    <script src="renderer.js"></script>
-
+    <script src="../../tracker-renderer.js"></script>
 </body>
 </html>
