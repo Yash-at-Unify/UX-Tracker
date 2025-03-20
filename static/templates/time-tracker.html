@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UX Time Tracker</title>
+    <title>Time Tracker</title>
+    <link rel="stylesheet" href="../css/tracker-style.css">
 </head>
 <body>
-    <h1>This is time tracker.</h1>
+
+    <div class="container">
+        <h2>Time Tracker</h2>
+
+        <!-- Time Toggle Switch -->
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="timeToggle">
+                <span class="slider"></span>
+            </label>
+            <p id="timer">00:00:00</p>
+        </div>
+
+        <div class="tracker-box">
+            <input type="text" id="companyName" placeholder="Company Name">
+            <input type="text" id="projectName" placeholder="Project Name">
+            <input type="text" id="activityName" placeholder="Activity Name">
+        </div>
+
+        <!-- Screenshot Preview Section -->
+        <div class="screenshot-section">
+            <h3>Recent Screenshots</h3>
+            <div id="screenshotPreview"></div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+
 </body>
 </html>

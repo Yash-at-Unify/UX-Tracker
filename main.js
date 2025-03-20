@@ -137,7 +137,7 @@ app.on('window-all-closed', () => {
 
 
 ipcMain.handle('login', async (event, username, password) => {
-  console.log("Received login request:", { username, password });
+  // console.log("Received login request:", { username, password });
 
   try {
     const response = await axios.post(
@@ -149,7 +149,7 @@ ipcMain.handle('login', async (event, username, password) => {
       {withCredentials: true}
     );
 
-    console.log("Backend Response:", response.data);  // ✅ Debugging Log
+    // console.log("Backend Response:", response.data);  // ✅ Debugging Log
 
     if (response.data.message === "Logged In") {
       mainWindow.loadFile("static/templates/time-tracker.html")
