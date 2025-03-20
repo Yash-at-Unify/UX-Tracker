@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const timeToggle = document.getElementById('timeToggle');
     const timerDisplay = document.getElementById('timer');
-    const screenshotPreview = document.getElementById('screenshotPreview');
+    // const screenshotPreview = document.getElementById('screenshotPreview');
 
     let tracking = false;
 

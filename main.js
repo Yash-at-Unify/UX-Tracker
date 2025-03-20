@@ -143,7 +143,7 @@ async function captureScreenshot() {
         // Save the full-quality image without resizing
         fs.writeFileSync(screenshotPath, source.thumbnail.toPNG());
 
-        console.log(`📸 Screenshot saved: ${screenshotPath}`);
+        console.log(`Screenshot saved: ${screenshotPath}`);
         return screenshotPath;
       }
     }
