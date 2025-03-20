@@ -8,7 +8,7 @@ let tray= null;
 let tracking = false;
 let trackedTime = 0;
 let timeInterval;
-const screenshotDir = path.join(app.getPath('userData'),'UX_Tracker_Screenshots');
+const screenshotDir = path.join(__dirname,'UX-Tracker-Screenshots');
 
 if(!fs.existsSync(screenshotDir)){
   fs.mkdirSync(screenshotDir,{ recursive: true });
@@ -124,32 +124,6 @@ ipcMain.on('stop-timer',()=>{
   trackedTime = 0;
   mainWindow.webContents.send('timer-update', `${trackedTime} mins`);
 });
-
-// async function captureScreenshot(){
-//   try {
-//     const sources = await desktopCapturer.getSources({ types: ['screen'] });
-
-//     // const screen = sources
-//     // Get the primary display
-//     // const primaryDisplay = screen.getPrimaryDisplay();
-//     const { width, height } = { width: 1920, height: 1080}
-
-//     for (const source of sources) {
-//         if (source.name.toLowerCase().includes('screen')) {
-//             const screenshotPath = path.join(screenshotDir, `screenshot-${Date.now()}.png`);
-            
-//             // Decode base64 and save the screenshot
-//             const imageBuffer = source.thumbnail.resize({width, height}).toPNG();
-//             fs.writeFileSync(screenshotPath, imageBuffer);
-
-//             console.log(`📸 Screenshot saved: ${screenshotPath}`);
-//             return screenshotPath;  // Send path back to renderer
-//         }
-//     }
-// } catch (error) {
-//     console.error('Screenshot Error:', error);
-// }
-// }
 
 async function captureScreenshot() {
   try {
