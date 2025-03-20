@@ -138,7 +138,26 @@ async function captureScreenshot() {
 
     for (const source of sources) {
       if (source.name.toLowerCase().includes('screen')) {
-        const screenshotPath = path.join(screenshotDir, `screenshot-${Date.now()}.png`);
+        const date = new Date().toISOString().split('T')[0]
+        
+        // Read existing screenshots to find the highest number
+        const files = fs.readdirSync(screenshotDir);
+        const regex = new RegExp(`^screenshot-${date}-(\\d+)\\.png$`);
+        let maxNumber = 0;
+
+        files.forEach(file => {
+          const match = file.match(regex);
+          if (match) {
+            const num = parseInt(match[1], 10);
+            if (num > maxNumber) {
+              maxNumber = num;
+            }
+          }
+        });
+
+        // Increment the number
+        const nextNumber = maxNumber + 1;
+        const screenshotPath = path.join(screenshotDir, `screenshot-${date}-${nextNumber}.png`);
         
         // Save the full-quality image without resizing
         fs.writeFileSync(screenshotPath, source.thumbnail.toPNG());
