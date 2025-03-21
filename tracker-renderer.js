@@ -31,3 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         screenshotPreview.appendChild(imgElement);
     });
 });
+//timer running graphics
+timeToggle.addEventListener("change", function () {
+  if (this.checked) {
+    timerDisplay.classList.add("running");
+  } else {
+    timerDisplay.classList.remove("running");
+  }
+});

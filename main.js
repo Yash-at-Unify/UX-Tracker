@@ -57,10 +57,6 @@ const createMainWindow = () => {
       console.log('Tray Error: ',er )
     }
   };
-  
-
-  
-
 }
 
 app.whenReady().then(() => {
@@ -78,7 +74,6 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
-
 
 ipcMain.handle('login', async (event, username, password) => {
   // console.log("Received login request:", { username, password });
@@ -170,3 +165,4 @@ async function captureScreenshot() {
     console.error('Screenshot Error:', error);
   }
 }
+
